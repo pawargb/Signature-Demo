@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Signature_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ik5-t0-C3N" customClass="YPDrawSignatureView" customModule="Signature_Demo" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Lcb-Ve-C54"/>
+                                    <constraint firstAttribute="height" constant="250" id="Sam-hz-rea"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-K5-DQf">
+                                <rect key="frame" x="62.5" y="474.5" width="83.5" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JOk-oX-YaS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSg-H6-sxY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-Tn-qNR">
+                                <rect key="frame" x="229" y="474.5" width="83.5" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7zQ-bL-LwH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cp-LJ-OM2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pux-mB-JPo">
+                                <rect key="frame" x="112.5" y="42.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="EP8-Te-HTv"/>
+                                    <constraint firstAttribute="width" constant="150" id="hgJ-8K-EX6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ik5-t0-C3N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0B1-k9-gJW"/>
+                            <constraint firstItem="ik5-t0-C3N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="27M-g9-CDV"/>
+                            <constraint firstItem="ik5-t0-C3N" firstAttribute="top" secondItem="pux-mB-JPo" secondAttribute="bottom" constant="16" id="8xC-41-PDk"/>
+                            <constraint firstItem="ZdU-K5-DQf" firstAttribute="top" secondItem="ik5-t0-C3N" secondAttribute="bottom" constant="16" id="9g7-Bj-3mm"/>
+                            <constraint firstItem="ZdU-K5-DQf" firstAttribute="width" secondItem="ik5-t0-C3N" secondAttribute="width" multiplier="1:3" id="OWN-Yl-EYl"/>
+                            <constraint firstItem="ogy-Tn-qNR" firstAttribute="top" secondItem="ik5-t0-C3N" secondAttribute="bottom" constant="16" id="TDL-fj-Ndt"/>
+                            <constraint firstItem="pux-mB-JPo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yg0-e7-Lfi"/>
+                            <constraint firstItem="ogy-Tn-qNR" firstAttribute="width" secondItem="ik5-t0-C3N" secondAttribute="width" multiplier="1:3" id="b90-e8-6cv"/>
+                            <constraint firstItem="ogy-Tn-qNR" firstAttribute="trailing" secondItem="ik5-t0-C3N" secondAttribute="trailing" id="c3r-tA-LSZ"/>
+                            <constraint firstItem="ZdU-K5-DQf" firstAttribute="leading" secondItem="ik5-t0-C3N" secondAttribute="leading" id="fFc-JL-ob1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="signatureImageView" destination="pux-mB-JPo" id="QAs-GN-HvG"/>
+                        <outlet property="signatureView" destination="ik5-t0-C3N" id="TgM-eW-EIv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
